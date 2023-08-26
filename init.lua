@@ -20,3 +20,20 @@ require("plugin-config.bufferline")
 
 
 require("plugin-config.lualine")
+
+
+require("plugin-config.telescope")
+
+-- 自动安装语言解析
+require("plugin-config.nvim-treesitter") -- （新增）
+
+
+-- 内置LSP (新增)
+require("lsp.setup")
+
+
+require("lsp.cmp")
+
+require("plugin-config.indent-blankline")
+
+require("lsp.null-ls")
