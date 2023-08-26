@@ -6,7 +6,8 @@ local lsp_installer = require("nvim-lsp-installer")
 -- https://github.com/williamboman/nvim-lsp-installer#available-lsps
 local servers = {
   lua_ls = require("lsp.config.lua"), -- lua/lsp/config/lua.lua
-  gopls = require("lsp.config.go") -- lua/lsp/config/go.lua  新增
+  gopls = require("lsp.config.go"), -- lua/lsp/config/go.lua  新增
+  pyright = require("lsp.config.pyright"),-- ua/lsp/config/python.lua  新增
 }
 -- 自动安装 Language Servers
 for name, _ in pairs(servers) do
