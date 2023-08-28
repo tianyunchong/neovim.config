@@ -35,7 +35,14 @@ packer.startup({
 
     -- 补全插件
     -- 补全引擎
-    use("hrsh7th/nvim-cmp")
+    -- use("hrsh7th/nvim-cmp")
+    use {
+        'hrsh7th/nvim-cmp',
+        requires = {
+            'hrsh7th/cmp-nvim-lsp'
+        }
+    }
+
     -- snippet 引擎
     use("hrsh7th/vim-vsnip")
     -- 补全源
@@ -58,6 +65,8 @@ packer.startup({
     
     use("williamboman/mason.nvim")
     use("williamboman/mason-lspconfig.nvim")
+
+
 
 
 
