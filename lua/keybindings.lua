@@ -54,6 +54,8 @@ map("t", "<Esc>", "<C-\\><C-n>", opt)
 -- visual模式下缩进代码
 map("v", "<", "<gv", opt)
 map("v", ">", ">gv", opt)
+vim.api.nvim_command('autocmd FileType phtml setlocal indentexpr=')
+
 -- 上下移动选中文本
 map("v", "J", ":move '>+1<CR>gv-gv", opt)
 map("v", "K", ":move '<-2<CR>gv-gv", opt)
@@ -102,6 +104,8 @@ map('n', '<leader>f', '<Plug>(easymotion-bd-f)', {})
 map('n', '<leader>w', '<Plug>(easymotion-bd-w)', {})
 
 
+-- 查看函数
+map("n", "<leader>func", ":TagbarToggle<CR>", opt)
 
 
 

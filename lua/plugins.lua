@@ -74,6 +74,7 @@ packer.startup({
       end
     }
 
+    use 'preservim/tagbar'
 
 
 
