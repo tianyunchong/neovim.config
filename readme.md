@@ -3,6 +3,10 @@
 
 https://jimyag.cn/posts/20d50b9d/
 
+```shell
+# 安装tags
+brew install universal-ctags
+```
 
 ### 代码折叠
 ```shell
