@@ -23,6 +23,13 @@ map("n", "<leader>j", "<C-w>j", opt)
 map("n", "<leader>k", "<C-w>k", opt)
 map("n", "<leader>l", "<C-w>l", opt)
 
+-- 保存文件
+-- 保存文件
+map('n', '<D-s>', ':w<CR>', { noremap = true })
+map('i', '<D-s>', '<Esc>:w<CR>', { noremap = true })
+map('v', '<D-s>', '<Esc>:w<CR>', { noremap = true })
+
+
 
 -- 调整窗口比例
 -- 左右比例控制
@@ -70,7 +77,7 @@ map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
 -- 关闭
 --"moll/vim-bbye"
-map("n", "<C-w>", ":Bdelete!<CR>", opt)
+map("n", "<C-w>", ":bdelete!<CR>", opt)
 map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)
 map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
 map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
@@ -84,7 +91,15 @@ map("n", "<leader>ff", ":Telescope find_files<CR>", opt)
 map("n", "<leader>fg", ":Telescope live_grep<CR>", opt)
 
 map("n", "<leader>env", ":Telescope env<CR>", opt)
+-- 跳转定义
+map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opt)
+map("n", "gh", "<cmd>Lspsaga hover_doc<cr>", opt)
 
+-- 快速搜索
+-- 设置快捷键映射
+map('n', '<leader><leader>', '<Plug>(easymotion-prefix)', {})
+map('n', '<leader>f', '<Plug>(easymotion-bd-f)', {})
+map('n', '<leader>w', '<Plug>(easymotion-bd-w)', {})
 
 
 
@@ -147,7 +162,6 @@ pluginKeys.mapLSP = function(mapbuf)
   -- code action
   mapbuf("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opt)
   -- go xx
-  mapbuf("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opt)
   mapbuf("n", "gh", "<cmd>Lspsaga hover_doc<cr>", opt)
   mapbuf("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opt)
   mapbuf("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opt)

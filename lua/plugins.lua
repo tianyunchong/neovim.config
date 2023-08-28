@@ -66,6 +66,14 @@ packer.startup({
     use("williamboman/mason.nvim")
     use("williamboman/mason-lspconfig.nvim")
 
+    -- easymotion
+    use {
+      'easymotion/vim-easymotion',
+      config = function()
+        -- 插件配置代码
+      end
+    }
+
 
 
 
