@@ -61,7 +61,8 @@ packer.startup({
     use("lukas-reineke/indent-blankline.nvim")
 
     -- 代码格式化
-    use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
+    -- use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
+    use("mhartington/formatter.nvim")
     
     use("williamboman/mason.nvim")
     use("williamboman/mason-lspconfig.nvim")

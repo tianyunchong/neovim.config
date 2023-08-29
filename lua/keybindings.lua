@@ -100,12 +100,16 @@ map("n", "gh", "<cmd>Lspsaga hover_doc<cr>", opt)
 -- 快速搜索
 -- 设置快捷键映射
 map('n', '<leader><leader>', '<Plug>(easymotion-prefix)', {})
-map('n', '<leader>f', '<Plug>(easymotion-bd-f)', {})
+map('n', '<leader>s', '<Plug>(easymotion-bd-f)', {})
 map('n', '<leader>w', '<Plug>(easymotion-bd-w)', {})
 
 
 -- 查看函数
 map("n", "<leader>func", ":TagbarToggle<CR>", opt)
+
+-- 格式化
+map('n', '<Leader>fmt', ':Lint<CR>', { silent = true })
+
 
 
 
@@ -174,7 +178,7 @@ pluginKeys.mapLSP = function(mapbuf)
   mapbuf("n", "gp", "<cmd>Lspsaga show_line_diagnostics<CR>", opt)
   mapbuf("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opt)
   mapbuf("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", opt)
-  mapbuf("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opt)
+  -- mapbuf("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opt)
 
    -- diagnostic
   mapbuf("n", "gp", "<cmd>lua vim.diagnostic.open_float()<CR>", opt)

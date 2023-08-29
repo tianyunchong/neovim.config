@@ -36,4 +36,4 @@ require("lsp.cmp")
 
 require("plugin-config.indent-blankline")
 
-require("lsp.null-ls")
+require("lsp.format")

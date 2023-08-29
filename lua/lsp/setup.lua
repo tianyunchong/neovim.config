@@ -6,7 +6,8 @@ require("mason-lspconfig").setup({
         "clangd",
         "cmake",
         "pyright",
-        "intelephense"
+        "intelephense",
+        "custom_elements_ls"
     },
 })
 
