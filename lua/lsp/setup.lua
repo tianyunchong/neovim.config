@@ -55,18 +55,17 @@ function M.on_attach(client, bufnr)
 end
 
 
-function M.config()
-  local lspconfig = require("lspconfig")
-  local mason_lspconfig = require("mason-lspconfig")
-  local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-  capabilities.textDocument.completion.completionItem.snippetSupport = true
-  capabilities.textDocument.foldingRange = {
-    dynamicRegistration = false,
-    lineFoldingOnly = true
-  }
-  vim.diagnostic.config({
-    virtual_text = false,
-  })
+local lspconfig = require("lspconfig")
+local mason_lspconfig = require("mason-lspconfig")
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities.textDocument.foldingRange = {
+  dynamicRegistration = false,
+  lineFoldingOnly = true
+}
+vim.diagnostic.config({
+  virtual_text = false,
+})
 
 
 
