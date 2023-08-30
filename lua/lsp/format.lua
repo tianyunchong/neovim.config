@@ -9,9 +9,9 @@ formatter.setup({
     php = {
         function()
           return {
-            exe = 'php-cs-fixer',
-            args = {'--config=/path/to/your/php-cs-fixer-config.php', '--using-cache=no', '--path=-'},
-            stdin = true
+            exe = '/Users/tyz/.composer/vendor/bin/php-cs-fixer',
+            args = {'--config=/Users/tyz/Documents/config/php-cs-fixer.php', '--using-cache=no', 'fix', vim.fn.shellescape(vim.api.nvim_buf_get_name(0)), "--quiet"},
+            stdin = false
           }
         end
     },
