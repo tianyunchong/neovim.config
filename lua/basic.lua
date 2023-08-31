@@ -72,3 +72,7 @@ vim.o.showtabline = 2
 vim.o.showmode = false
 -- 配置剪切板
 vim.opt.clipboard = "unnamedplus"
+
+
+-- 在状态栏上显示当前文件路径
+vim.api.nvim_command('set laststatus=2')

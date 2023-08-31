@@ -21,5 +21,9 @@ zo 打开折叠的内容
 gd  跳转到函数定义处
 <leader>+f  输入一个字母  搜索当前buffer里的值
 gh   显示帮助
+<leader>+h  跳转到左侧的窗口
+<leader>+l  跳转到右侧的窗口
+<leader>+j  切换到下方的窗口
+<leader>+k  切换到上方的窗口
 ```
 
